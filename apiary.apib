@@ -1,0 +1,106 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# penjarkessiswa
+
+Mock API Untuk Penjarkes Siswa
+
+## Oauth [/oauth/token]
+
+### Registration Access Token [POST]
+
+This API provides access token to registration, so you need to call this before doing a registration.
+
++ Request (application/json)
+
+    + Attributes
+        + username (string) - Use this only for Login
+        + password (string) - Use this only for Login
+    
+    + Body    
+    
+            {
+                "grant_type": "client_credentials",
+                "client_id": "8a232948-6bcb-4bf2-b025-1156743f678e",
+                "client_secret": "kobstp1NvhT9j2QUda0EOWolaFkHHaigIuNgSGZM",
+                "scope": "",
+                "username": "seto@tonjoo.com",
+                "password": "123456"
+            }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "token_type": "Bearer",
+                "expires_in": 1296000,
+                "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4YTIzMjk0OC02YmNiLTRiZjItYjAyNS0xMTU2NzQzZjY3OGUiLCJqdGkiOiI4YjQyNTNkNWM3YWY0NzMxMjBlNjI4YjQ4ZjcwMjgzNTFkYWU0MzU2N2Y0ZDhjNzY3ODdiYzFiOWVjZDc5YmY1OTdmMzE0YTkwZjY3ODRhMyIsImlhdCI6MTYwNzYzNzcwMSwibmJmIjoxNjA3NjM3NzAxLCJleHAiOjE2MDg5MzM3MDEsInN1YiI6IiIsInNjb3BlcyI6W119.ZkzvdlTbwIm3KwcEruRAEIp-hqhKfZ-JVUAtu3SF9QAWc5mbzbMJN58pLGcax_P5B9uZCDRF88UE5l-Z0l4tRQK-Iv1eGjrI6AzPlFzW2PdiuTk71Nxa-fA4eklwLkU_TjjSazVdL_f9szveCpTrSUXmVn77pUiZFsNjkVpK-m_fsc3bc1hv_ASlynsarbERkedeK0JRgKWsBb3gny_GnNI9rY9LAu-lCuMQC9N3SYVqiEwldNCCzrnj3QLjbmFN3hKZuNgWbZBOIs6JdUlx4njPHjha4iRgZapd8i7TZbzJTCv8V0rvAug7FtjICfNhyuSIS1jbbX7LLQ0HhQ9PDlnGGZb_lCROlNj_VRWrgQ44V5oaNOlPDQaxxWOc1K99oo5zpyAPaz30YRa3s7P61io4Vc5gxak7WnWYF883k1MvnGdKvV3g4kuKjBUwg6Uxiox_vQRWEyxR498nw9pRMW2HH5VAJpG4Gre6Jj_YIbOrVy1Ih7IsGHpCCk8UXrc_CkAniYdrKx5k9ZAQE4FasgG_Hfp7a6yvdsNORTSFu1vU6T2Rq7JV7msTyJMTo6s8JHmlzdKzrJlIYgWgYnrC6rdLo7VP04sKWyqnpKpn-IINYpmFoOvB-z6jGIYZKdH0Wag8vUlULHPT43IVVHGo6_jXdUPBb8-k5e6P4rXqp4A",
+                "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4YTIzMjk0OC02YmNiLTRiZjItYjAyNS0xMTU2NzQzZjY3OGUiLCJqdGkiOiI4YjQyNTNkNWM3YWY0NzMxMjBlNjI4YjQ4ZjcwMjgzNTFkYWU0MzU2N2Y0ZDhjNzY3ODdiYzFiOWVjZDc5YmY1OTdmMzE0YTkwZjY3ODRhMyIsImlhdCI6MTYwNzYzNzcwMSwibmJmIjoxNjA3NjM3NzAxLCJleHAiOjE2MDg5MzM3MDEsInN1YiI6IiIsInNjb3BlcyI6W119.ZkzvdlTbwIm3KwcEruRAEIp-hqhKfZ-JVUAtu3SF9QAWc5mbzbMJN58pLGcax_P5B9uZCDRF88UE5l-Z0l4tRQK-Iv1eGjrI6AzPlFzW2PdiuTk71Nxa-fA4eklwLkU_TjjSazVdL_f9szveCpTrSUXmVn77pUiZFsNjkVpK-m_fsc3bc1hv_ASlynsarbERkedeK0JRgKWsBb3gny_GnNI9rY9LAu-lCuMQC9N3SYVqiEwldNCCzrnj3QLjbmFN3hKZuNgWbZBOIs6JdUlx4njPHjha4iRgZapd8i7TZbzJTCv8V0rvAug7FtjICfNhyuSIS1jbbX7LLQ0HhQ9PDlnGGZb_lCROlNj_VRWrgQ44V5oaNOlPDQaxxWOc1K99oo5zpyAPaz30YRa3s7P61io4Vc5gxak7WnWYF883k1MvnGdKvV3g4kuKjBUwg6Uxiox_vQRWEyxR498nw9pRMW2HH5VAJpG4Gre6Jj_YIbOrVy1Ih7IsGHpCCk8UXrc_CkAniYdrKx5k9ZAQE4FasgG_Hfp7a6yvdsNORTSFu1vU6T2Rq7JV7msTyJMTo6s8JHmlzdKzrJlIYgWgYnrC6rdLo7VP04sKWyqnpKpn-IINYpmFoOvB-z6jGIYZKdH0Wag8vUlULHPT43IVVHGo6_jXdUPBb8-k5e6P4rXqp4A"
+            }
+
++ Response 401 (application/json)
+
+    + Body
+    
+            {
+                "error": "invalid_client",
+                "error_description": "Client authentication failed",
+                "message": "Client authentication failed"
+            }
+            
+## Registration [/api-client/penjarkes/register]
+
+### Student Registration [POST]
+
+Call this API to register the student, 
+but before doing this, you need to call oauth API to get access token.
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer {your-registration-token}
+        
+    + Body
+        
+            {
+                "nama_lengkap": "Arseto Satriyo Nugroho",
+                "email": "seto@tonjoo.com",
+                "nomor_telepon": "0274562309",
+                "password": "123456",
+                "password_confirmation": "123456"
+            }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "message": "User Registered: Arseto Satriyo Nugroho",
+                "success": true
+            }
+
++ Response 401 (application/json)
+
+    + Body
+    
+            {
+                "error": "Unauthenticated"
+            }
+            
++ Response 422 (application/json)
+
+    + Body
+    
+            {
+                "message": "The given data was invalid.",
+                "errors": {
+                    "email": [
+                        "The email has already been taken."
+                    ],
+                    "nik": [
+                        "The nik has already been taken."
+                    ]
+                }
+            }
