@@ -104,3 +104,28 @@ but before doing this, you need to call oauth API to get access token.
                     ]
                 }
             }
+
+## Profile [/api-client/penjarkes/profile]
+
+### Find User Profile [GET]
+
+Call this API to get logged in user profile.
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer {your-registration-token}
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "nama_lengkap": "Arseto Satriyo Nugroho",
+                "email": "seto@tonjoo.com",
+                "nomor_telepon": "0274562309",
+                "sekolah": "SMAN 77 Jakarta",
+                "kelas": "XII",
+                "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg",
+            }
