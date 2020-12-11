@@ -78,8 +78,8 @@ but before doing this, you need to call oauth API to get access token.
     + Body
 
             {
-                "nama_lengkap": "Arseto Satriyo Nugroho",
-                "email": "seto@tonjoo.com",
+                "nama_lengkap": "Haryo Budi",
+                "email": "budi@gmail.com",
                 "nomor_telepon": "0274562309",
                 "password": "123456",
                 "password_confirmation": "123456"
@@ -90,7 +90,7 @@ but before doing this, you need to call oauth API to get access token.
     + Body
 
             {
-                "message": "User Registered: Arseto Satriyo Nugroho",
+                "message": "Haryo Budi",
                 "success": true
             }
 
@@ -120,7 +120,7 @@ but before doing this, you need to call oauth API to get access token.
 
 ## Profile [/api-pkrs/siswa/profile]
 
-### Find User Profile [GET]
+### Get User Profile [GET]
 
 Call this API to get logged in user profile.
 
@@ -135,13 +135,75 @@ Call this API to get logged in user profile.
     + Body
 
             {
-                "nama_lengkap": "Arseto Satriyo Nugroho",
-                "email": "seto@tonjoo.com",
+                "nama_lengkap": "Haryo Budi",
+                "email": "budi@gmail.com",
                 "nik": "12345678",
                 "nomor_telepon": "0274562309",
-                "sekolah": "SMAN 77 Jakarta",
-                "kelas": "XII",
-                "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg"
+                "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg",
+                "data_identitas": {
+                    "nama_lengkap_anak": "Haryo Budi",
+                    "nisn": "9192310129",
+                    "nik": "3499914010001",
+                    "nomor_ponsel": "08123546569",
+                    "tempat_lahir": "Yogyakarta",
+                    "tanggal_lahir": "29 Februari 2004",
+                    "jenis_kelamin": "laki-laki",
+                    "golongan_darah": "a",
+                    "resus": "negatif",
+                    "is_disabilitas": false,
+                    "nama_orang_tua_wali": "KRT Purwowinoto",
+                    "foto": "https://randomuser.me/api/portraits/men/32.jpg"
+                }
+            }
+
+### Update User Profile [PUT]
+
+Update profile can be done with password or without password
+
++ Request Update Profile (application/json)
+
+    + Headers
+
+            Authorization: Bearer {your-access-token}
+
+    + Body
+
+            {
+                "nama_lengkap": "Haryo Budi",
+                "nik": "12345678",
+                "email": "budi@gmail.com",
+                "nomor_telepon": "0274562309"
+            }
+
++ Request Update Profile and Password (application/json)
+
+    + Headers
+
+            Authorization: Bearer {your-access-token}
+
+    + Body
+
+            {
+                "nama_lengkap": "Haryo Budi",
+                "nik": "12345678",
+                "email": "budi@gmail.com",
+                "nomor_telepon": "0274562309",
+                "password": "123123",
+                "password_confirmation": "123123"
+            }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "success": true,
+                "data": {
+                    "nama_lengkap": "Haryo Budi",
+                    "nik": "12345678",
+                    "email": "budi@gmail.com",
+                    "nomor_telepon": "0274562309"
+                }
             }
 
 ## Profile Picture [/api-pkrs/siswa/profile-picture]
@@ -158,7 +220,7 @@ Upload profile picture using multipart form data
 
     + Body
 
-            Content-Disposition: form-data; name="profile_picture"; filename="/home/arseto/Projects/tonjoo/kesrem-who/padmanaba.jpg
+            Content-Disposition: form-data; name="profile_picture"; filename="/tonjoo/kesrem-who/padmanaba.jpg"
             Content-Type: image/jpeg (according to the type of the uploaded file)
 
             {file content}
@@ -323,6 +385,64 @@ Get all enums used in application
                 ]
             }
 
+## Link Information [/api-pkrs/penjarkes/{uniqueId}/information]
+
++ Parameters
+    + uniqueId (string) - kode unik form penjarkes
+
+### Get Link Information [GET]
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {your-access-token}
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "success": true,
+                "data": [
+                    {
+                        "label": "Periode",
+                        "value": "2020"
+                    },
+                    {
+                        "label": "Provinsi",
+                        "value": "DKI Jakarta"
+                    },
+                    {
+                        "label": "Kab/Kota",
+                        "value": "Kota Administratif Jakarta Barat"
+                    },
+                    {
+                        "label": "Kecamatan",
+                        "value": "Kebon Jeruk"
+                    },
+                    {
+                        "label": "Puskesmas",
+                        "value": "Kebon Jeruk I"
+                    },
+                    {
+                        "label": "Induk Instansi Pendidikan",
+                        "value": "Kementrian Pendidikan dan Kebudayaan"
+                    },
+                    {
+                        "label": "NPSN",
+                        "value": "2010990802"
+                    {
+                        "label": "Nama Sekolah",
+                        "value": "SMAN 35 Jakarta"
+                    },
+                    {
+                        "label": "Alamat Sekolah",
+                        "value": "Jl Mutiara no 7, RT 14/RW 5, Kebon Jeruk, Jakarta Barat"
+                    }
+                ]
+            }
+
 ## Form Pernyataan [/api-pkrs/penjarkes/pernyataan/{uniqueId}]
 
 + Parameters
@@ -344,7 +464,7 @@ Get default data for pernyataan
                 "success": true,
                 "data": {
                     "nik": "3404071810860002",
-                    "nama_lengkap_anak": "Arseto Nugroho",
+                    "nama_lengkap_anak": "Haryo Budi",
                     "nisn": "991203193",
                     "nomor_ponsel": "0274562309",
                     "profile_picture": "http://localhost:8000/uploads/profile_pictures/5fd2f7701ab09_1607661424.jpg"
@@ -363,8 +483,8 @@ Get default data for pernyataan
 
             {
                 "nik": "3404071810860002",
-                "nama_lengkap_anak": "Arseto Nugroho",
-                "nama_orang_tua_wali": "Ronni Guritno",
+                "nama_lengkap_anak": "Haryo Budi",
+                "nama_orang_tua_wali": "KRT Purwowinoto",
                 "nisn": "991203193",
                 "nomor_ponsel": "0274562309",
                 "foto": "http://localhost:8000/uploads/profile_pictures/5fcf477123b87_1607419761.jpeg",
@@ -378,6 +498,74 @@ Get default data for pernyataan
             {
                 "success": true,
                 "message": "Pernyataan berhasil disimpan"
+            }
+
+## Form Identitas Anak [/api-pkrs/penjarkes/identitas/{uniqueId}]
+
++ Parameters
+    + uniqueId (string) - kode unik form penjarkes
+
+### Get Default Data [GET]
+
+Get default data for identitas
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {your-access-token}
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "nama_lengkap_anak": "Haryo Budi",
+                "tempat_lahir": "Yogyakarta",
+                "tanggal_lahir": "2004-02-29",
+                "umur": 16,
+                "jenis_kelamin": "laki-laki",
+                "kelas": "x",
+                "golongan_darah": "a",
+                "rhesus": "negatif",
+                "is_disabilitas": false,
+                "disabilitas": null,
+                "nama_orang_tua_wali": "KRT Purwowinoto"
+            }
+
+### Post Identitas [POST]
+
+Post identitas for penjarkes
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: Bearer {your-access-token}
+
+    + Body
+
+            {
+                "nama_lengkap_anak": "Haryo Budi",
+                "tempat_lahir": "Yogyakarta",
+                "tanggal_lahir": "2004-02-29",
+                "umur": 16,
+                "jenis_kelamin": "laki-laki",
+                "kelas": "x",
+                "golongan_darah": "a",
+                "rhesus": "negatif",
+                "is_disabilitas": false,
+                "disabilitas": null,
+                "nama_orang_tua_wali": "KRT Purwowinoto"
+            }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "success": true,
+                "message": "Identitas form saved"
             }
 
 ## Form List Last Updated [/api-pkrs/penjarkes/forms/{uniqueId}/last-update]
