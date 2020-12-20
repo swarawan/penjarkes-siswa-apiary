@@ -135,16 +135,14 @@ Call this API to get logged in user profile.
     + Body
 
             {
-                "nama_lengkap": "Haryo Budi",
-                "email": "budi@gmail.com",
-                "nik": "12345678",
-                "nomor_telepon": "0274562309",
-                "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg",
-                "data_identitas": {
-                    "nama_lengkap_anak": "Haryo Budi",
+                "success": true,
+                "updated_at": "2020-12-20 16:19:20",
+                "data": {
+                    "nama_lengkap": "Haryo Budi",
                     "nisn": "9192310129",
                     "nik": "3499914010001",
-                    "nomor_ponsel": "08123546569",
+                    "email": "budi@gmail.com",
+                    "nomor_telepon": "08123546569",
                     "tempat_lahir": "Yogyakarta",
                     "tanggal_lahir": "29 Februari 2004",
                     "jenis_kelamin": "laki-laki",
@@ -152,28 +150,13 @@ Call this API to get logged in user profile.
                     "resus": "negatif",
                     "is_disabilitas": false,
                     "nama_orang_tua_wali": "KRT Purwowinoto",
-                    "foto": "https://randomuser.me/api/portraits/men/32.jpg"
+                    "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg"
                 }
             }
 
 ### Update User Profile [PUT]
 
 Update profile can be done with password or without password
-
-+ Request Update Profile (application/json)
-
-    + Headers
-
-            Authorization: Bearer {your-access-token}
-
-    + Body
-
-            {
-                "nama_lengkap": "Haryo Budi",
-                "nik": "12345678",
-                "email": "budi@gmail.com",
-                "nomor_telepon": "0274562309"
-            }
 
 + Request Update Profile and Password (application/json)
 
@@ -192,30 +175,27 @@ Update profile can be done with password or without password
                 "password_confirmation": "123123"
             }
 
-+ Request Update Password (application/json)
-
-    + Headers
-
-            Authorization: Bearer {your-access-token}
-
-    + Body
-
-            {
-                "password": "123123",
-                "password_confirmation": "123123"
-            }
-
 + Response 200 (application/json)
 
     + Body
 
             {
                 "success": true,
+                "updated_at": "2020-12-20 16:19:20",
                 "data": {
                     "nama_lengkap": "Haryo Budi",
-                    "nik": "12345678",
+                    "nisn": "9192310129",
+                    "nik": "3499914010001",
                     "email": "budi@gmail.com",
-                    "nomor_telepon": "0274562309"
+                    "nomor_telepon": "08123546569",
+                    "tempat_lahir": "Yogyakarta",
+                    "tanggal_lahir": "29 Februari 2004",
+                    "jenis_kelamin": "laki-laki",
+                    "golongan_darah": "a",
+                    "resus": "negatif",
+                    "is_disabilitas": false,
+                    "nama_orang_tua_wali": "KRT Purwowinoto",
+                    "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg"
                 }
             }
 
