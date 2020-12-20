@@ -223,8 +223,10 @@ Upload profile picture using multipart form data
 
             {
                 "success": true,
-                "message": "Profile picture saved",
-                "profile_picture_path": "uploads/profile_pictures/5fd2f7701ab09_1607661424.jpg"
+                "updated_at": "2020-12-20 16:19:20",
+                "data": {
+                    "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg"
+                }
             }
 
 # Group Form and Kuesioner
@@ -244,138 +246,141 @@ Get all enums used in application
 + Response 200 (application/json)
 
             {
-                "golongan_darah": [
-                    {
-                        "id": "a",
-                        "text": "A"
-                    },
-                    {
-                        "id": "b",
-                        "text": "B"
-                    },
-                    {
-                        "id": "ab",
-                        "text": "AB"
-                    },
-                    {
-                        "id": "o",
-                        "text": "O"
-                    }
-                ],
-                "tingkat_pendidikan": [
-                    {
-                        "id": "i",
-                        "text": "I"
-                    },
-                    {
-                        "id": "ii",
-                        "text": "II"
-                    },
-                    {
-                        "id": "iii",
-                        "text": "III"
-                    },
-                    {
-                        "id": "iv",
-                        "text": "IV"
-                    },
-                    {
-                        "id": "v",
-                        "text": "V"
-                    },
-                    {
-                        "id": "vi",
-                        "text": "VI"
-                    },
-                    {
-                        "id": "vii",
-                        "text": "VII"
-                    },
-                    {
-                        "id": "viii",
-                        "text": "VIII"
-                    },
-                    {
-                        "id": "ix",
-                        "text": "IX"
-                    },
-                    {
-                        "id": "x",
-                        "text": "X"
-                    },
-                    {
-                        "id": "xi",
-                        "text": "XI"
-                    },
-                    {
-                        "id": "xii",
-                        "text": "XII"
-                    }
-                ],
-                "jenis_kelamin": [
-                    {
-                        "id": "laki-laki",
-                        "text": "Laki-laki"
-                    },
-                    {
-                        "id": "perempuan",
-                        "text": "Perempuan"
-                    }
-                ],
-                "rhesus": [
-                    {
-                        "id": "positif",
-                        "text": "Positif"
-                    },
-                    {
-                        "id": "negatif",
-                        "text": "Negatif"
-                    }
-                ],
-                "ya_tidak": [
-                    {
-                        "id": "ya",
-                        "text": "Ya"
-                    },
-                    {
-                        "id": "tidak",
-                        "text": "Tidak"
-                    }
-                ],
-                "disabilitas": [
-                    {
-                        "id": "netra",
-                        "text": "Netra"
-                    },
-                    {
-                        "id": "rungu",
-                        "text": "Rungu"
-                    },
-                    {
-                        "id": "rungu_wicara",
-                        "text": "Rungu Wicara"
-                    },
-                    {
-                        "id": "grahita",
-                        "text": "Grahita"
-                    },
-                    {
-                        "id": "daksa",
-                        "text": "Daksa"
-                    },
-                    {
-                        "id": "autisme",
-                        "text": "Autisme"
-                    },
-                    {
-                        "id": "ganda",
-                        "text": "Ganda"
-                    },
-                    {
-                        "id": "adhd",
-                        "text": "Adhd"
-                    }
-                ]
+                "success": true,
+                "updated_at": "2020-12-20 16:19:20",
+                "data": [{
+                    "golongan_darah": [{
+                            "id": "a",
+                            "text": "A"
+                        },
+                        {
+                            "id": "b",
+                            "text": "B"
+                        },
+                        {
+                            "id": "ab",
+                            "text": "AB"
+                        },
+                        {
+                            "id": "o",
+                            "text": "O"
+                        }
+                    ]
+                }, {
+                    "tingkat_pendidikan": [{
+                            "id": "i",
+                            "text": "I"
+                        },
+                        {
+                            "id": "ii",
+                            "text": "II"
+                        },
+                        {
+                            "id": "iii",
+                            "text": "III"
+                        },
+                        {
+                            "id": "iv",
+                            "text": "IV"
+                        },
+                        {
+                            "id": "v",
+                            "text": "V"
+                        },
+                        {
+                            "id": "vi",
+                            "text": "VI"
+                        },
+                        {
+                            "id": "vii",
+                            "text": "VII"
+                        },
+                        {
+                            "id": "viii",
+                            "text": "VIII"
+                        },
+                        {
+                            "id": "ix",
+                            "text": "IX"
+                        },
+                        {
+                            "id": "x",
+                            "text": "X"
+                        },
+                        {
+                            "id": "xi",
+                            "text": "XI"
+                        },
+                        {
+                            "id": "xii",
+                            "text": "XII"
+                        }
+                    ]
+                }, {
+                    "jenis_kelamin": [{
+                            "id": "laki-laki",
+                            "text": "Laki-laki"
+                        },
+                        {
+                            "id": "perempuan",
+                            "text": "Perempuan"
+                        }
+                    ]
+                }, {
+                    "rhesus": [{
+                            "id": "positif",
+                            "text": "Positif"
+                        },
+                        {
+                            "id": "negatif",
+                            "text": "Negatif"
+                        }
+                    ]
+                }, {
+                    "ya_tidak": [{
+                            "id": "ya",
+                            "text": "Ya"
+                        },
+                        {
+                            "id": "tidak",
+                            "text": "Tidak"
+                        }
+                    ]
+                }, {
+                    "disabilitas": [{
+                            "id": "netra",
+                            "text": "Netra"
+                        },
+                        {
+                            "id": "rungu",
+                            "text": "Rungu"
+                        },
+                        {
+                            "id": "rungu_wicara",
+                            "text": "Rungu Wicara"
+                        },
+                        {
+                            "id": "grahita",
+                            "text": "Grahita"
+                        },
+                        {
+                            "id": "daksa",
+                            "text": "Daksa"
+                        },
+                        {
+                            "id": "autisme",
+                            "text": "Autisme"
+                        },
+                        {
+                            "id": "ganda",
+                            "text": "Ganda"
+                        },
+                        {
+                            "id": "adhd",
+                            "text": "Adhd"
+                        }
+                    ]
+                }]
             }
 
 ## Link Information [/api-pkrs/penjarkes/{uniqueId}/information]
@@ -397,6 +402,7 @@ Get all enums used in application
 
             {
                 "success": true,
+                "updated_at": "2020-12-20 16:19:20",
                 "data": [
                     {
                         "label": "Periode",
@@ -444,7 +450,7 @@ Get all enums used in application
 
 ### Get Default Data [GET]
 
-Get default data for pernyataan
+Get default data for pernyataan (harusnya ga perlu endpoint ini, soalnya bisa dapet dari get profile)
 
 + Request
 
@@ -501,7 +507,7 @@ Get default data for pernyataan
 
 ### Get Default Data [GET]
 
-Get default data for identitas
+Get default data for identitas (harusnya ga perlu endpoint ini, soalnya bisa dapet dari get profile)
 
 + Request
 
