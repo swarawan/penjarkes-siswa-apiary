@@ -453,35 +453,12 @@ Get all enums used in application
                 ]
             }
 
-## Form Pernyataan [/api-pkrs/penjarkes/pernyataan/{uniqueId}]
+## Form Pernyataan Orang Tua [/api-pkrs/penjarkes/pernyataan/{uniqueId}]
 
 + Parameters
     + uniqueId (string) - kode unik form penjarkes
 
-### Get Default Data [GET]
-
-Get default data for pernyataan (harusnya ga perlu endpoint ini, soalnya bisa dapet dari get profile)
-
-+ Request
-
-    + Headers
-
-            Authorization: Bearer {your-access-token}
-
-+ Response 200 (application/json)
-
-            {
-                "success": true,
-                "data": {
-                    "nik": "3404071810860002",
-                    "nama_lengkap_anak": "Haryo Budi",
-                    "nisn": "991203193",
-                    "nomor_ponsel": "0274562309",
-                    "profile_picture": "http://localhost:8000/uploads/profile_pictures/5fd2f7701ab09_1607661424.jpg"
-                }
-            }
-
-### Post Pernyataan [POST]
+### Post Pernyataan Orang Tua [POST]
 
 + Request (application/json)
 
