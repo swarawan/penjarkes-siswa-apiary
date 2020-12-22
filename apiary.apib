@@ -152,6 +152,7 @@ Call this API to get logged in user profile.
                     "nama_orang_tua_wali": "KRT Purwowinoto",
                     "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg",
                     "sekolah" : "SMAN 7 Jakarta",
+                    "alamat_sekolah" : "Jl. Haji Naim No.299",
                     "kelas":"X"
                 }
             }
@@ -199,7 +200,8 @@ Update profile can be done with password or without password
                     "nama_orang_tua_wali": "KRT Purwowinoto",
                     "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg",
                     "sekolah" : "SMAN 7 Jakarta",
-                    "kelas":"X"
+                    "alamat_sekolah" : "Jl. Haji Naim No.299",
+                    "kelas":"x"
                 }
             }
 
@@ -492,34 +494,6 @@ Get all enums used in application
 + Parameters
     + uniqueId (string) - kode unik form penjarkes
 
-### Get Default Data [GET]
-
-Get default data for identitas (harusnya ga perlu endpoint ini, soalnya bisa dapet dari get profile)
-
-+ Request
-
-    + Headers
-
-            Authorization: Bearer {your-access-token}
-
-+ Response 200 (application/json)
-
-    + Body
-
-            {
-                "nama_lengkap_anak": "Haryo Budi",
-                "tempat_lahir": "Yogyakarta",
-                "tanggal_lahir": "2004-02-29",
-                "umur": 16,
-                "jenis_kelamin": "laki-laki",
-                "kelas": "x",
-                "golongan_darah": "a",
-                "rhesus": "negatif",
-                "is_disabilitas": false,
-                "disabilitas": null,
-                "nama_orang_tua_wali": "KRT Purwowinoto"
-            }
-
 ### Post Identitas [POST]
 
 Post identitas for penjarkes
@@ -543,7 +517,9 @@ Post identitas for penjarkes
                 "rhesus": "negatif",
                 "is_disabilitas": false,
                 "disabilitas": null,
-                "nama_orang_tua_wali": "KRT Purwowinoto"
+                "nama_orang_tua_wali": "KRT Purwowinoto",
+                "sekolah" : "SMAN 7 Jakarta",
+                "alamat_sekolah" : "Jl. Haji Naim No.299",
             }
 
 + Response 200 (application/json)
