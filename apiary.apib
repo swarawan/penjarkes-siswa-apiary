@@ -235,6 +235,26 @@ Upload profile picture using multipart form data
                 }
             }
 
+# Group News
+
+## Berita [/api-pkrs/berita]
+
+### Request berita di halaman home [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "success": true,
+                "data": [
+                    "https://ichef.bbci.co.uk/news/976/cpsprodpb/756A/production/_115985003_gettyimages-56200138.jpg",
+                    "https://ichef.bbci.co.uk/news/976/cpsprodpb/1373E/production/_115987697_reuters_hi064721223.jpg",
+                    "https://ichef.bbci.co.uk/news/976/cpsprodpb/1102E/production/_115987696_reuters_hi064731388.jpg",
+                    "https://ichef.bbci.co.uk/news/976/cpsprodpb/E91E/production/_115987695_reuters_hi064733995.jpg"
+                ]
+            }
+
 # Group Catatan Kesehatan
 
 ## Periode [/api-pkrs/catatan-kesehatan/periode]
@@ -644,7 +664,7 @@ Post identitas for penjarkes
                                 "pertanyaan": "Riwayat alergi \n(makanan, obat, hewan, lainnya)",
                                 "kode": "",
                                 "opsi_jawaban": null,
-                                "jawaban": null,
+                                "jawaban": "ya",
                                 "keterangan": null,
                                 "catatan_petugas": null,
                                 "updated_at": "2020-12-03 09:51:15"
