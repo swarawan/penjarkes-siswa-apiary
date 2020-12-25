@@ -2351,75 +2351,39 @@ Post identitas for penjarkes
 
 ### Post Answers [POST]
 
-+ Request
++ Request (multipart/form-data; boundary={boundary value})
 
     + Headers
 
-            Authorization: Bearer {your-access-token}
+            Authorization: Bearer {your-access token}
+
+    + Body
+
+            [
+                {
+                    "id" : 35,
+                    "jawaban" : "ya",
+                    "keterangan" : "merokok 2 kali sehari",
+                },
+                {
+                    "id" : 36,
+                    "jawaban" : "ya",
+                    "keterangan" : "minum miras 2 kali sehari",
+                },
+                {
+                    "id" : 37,
+                    "jawaban" : "tidak",
+                    "keterangan" : null,
+                },
+                {
+                    "id" : 38,
+                    "jawaban" : "tidak",
+                    "keterangan" : null,
+                }
+            ]
 
 + Response 200 (application/json)
 
             {
-                "data": [
-                    {
-                        "id": 35,
-                        "list_sub_form": [],
-                        "list_pertanyaan": [
-                            {
-                                "id": 224,
-                                "jawaban": "1",
-                                "keterangan": "Kucing",
-                                "catatan_petugas": null
-                            },
-                            {
-                                "id": 225,
-                                "jawaban": "2",
-                                "keterangan": null,
-                                "catatan_petugas": null
-                            }
-                        ]
-                    },
-                    {
-                        "id": 37,
-                        "list_sub_form": [
-                            {
-                                "id": 38,
-                                "list_sub_form": [],
-                                "list_pertanyaan": [
-                                    {
-                                        "id": 258,
-                                        "jawaban": "1",
-                                        "keterangan": null,
-                                        "catatan_petugas": null
-                                    },
-                                    {
-                                        "id": 259,
-                                        "jawaban": "2",
-                                        "keterangan": null,
-                                        "catatan_petugas": null
-                                    }
-                                ]
-                            },
-                            {
-                                "id": 39,
-                                "list_sub_form": [],
-                                "list_pertanyaan": [
-                                    {
-                                        "id": 262,
-                                        "jawaban": "2",
-                                        "keterangan": null,
-                                        "catatan_petugas": null
-                                    },
-                                    {
-                                        "id": 263,
-                                        "jawaban": "1",
-                                        "keterangan": null,
-                                        "catatan_petugas": null
-                                    }
-                                ]
-                            }
-                        ],
-                        "list_pertanyaan": []
-                    }
-                ]
+                "success": true
             }
