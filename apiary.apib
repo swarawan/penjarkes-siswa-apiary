@@ -136,7 +136,7 @@ Call this API to get logged in user profile.
 
             {
                 "success": true,
-                "updated_at": "2020-12-20 17:19:20",
+                "updated_at": "2020-12-20 18:19:20",
                 "data": {
                     "nama_lengkap": "Haryo Budi",
                     "nisn": "9192310129",
@@ -153,8 +153,7 @@ Call this API to get logged in user profile.
                     "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg",
                     "sekolah" : "SMAN 7 Jakarta",
                     "alamat_sekolah" : "Jl. Haji Naim No.299",
-                    "kelas":"X",
-                    "tahun_terakhir_submit_form" : "2019"
+                    "kelas":"X"
                 }
             }
 
@@ -185,7 +184,7 @@ Update profile can be done with password or without password
 
             {
                 "success": true,
-                "updated_at": "2020-12-20 17:19:20",
+                "updated_at": "2020-12-20 18:19:20",
                 "data": {
                     "nama_lengkap": "Haryo Budi",
                     "nisn": "9192310129",
@@ -202,8 +201,7 @@ Update profile can be done with password or without password
                     "foto_profil": "https://randomuser.me/api/portraits/men/32.jpg",
                     "sekolah" : "SMAN 7 Jakarta",
                     "alamat_sekolah" : "Jl. Haji Naim No.299",
-                    "kelas":"x",
-                    "tahun_terakhir_submit_form" : "2019"
+                    "kelas":"x"
                 }
             }
 
@@ -658,13 +656,15 @@ Post identitas for penjarkes
             {
                 "success": true,
                 "share_form_id": 1,
-                "updated_at": "2020-12-04 11:02:08",
+                "updated_at": "2020-12-05 01:03:08",
                 "data": [
                     {
                         "id": 35,
                         "nama": "Riwayat Kesehatan Anak",
                         "layout": "kuesioner",
                         "slug" : "riwayat-kesehatan",
+                        "jenis_kelamin" : NULL,
+                        "umur" : NULL,
                         "opsi_jawaban": {
                             "nama": "Ya/Tidak",
                             "tipe_opsi": "pilihan",
@@ -952,6 +952,8 @@ Post identitas for penjarkes
                         "nama": "Riwayat Imunisasi Anak",
                         "layout": "kuesioner",
                         "slug" : "riwayat-imunisasi",
+                        "jenis_kelamin" : NULL,
+                        "umur" : NULL,
                         "opsi_jawaban": {
                             "nama": "Ya/Tidak",
                             "tipe_opsi": "pilihan",
@@ -1085,6 +1087,8 @@ Post identitas for penjarkes
                         "nama": "Penggunaan Zat Adiktif dan Perilaku Berisiko",
                         "layout": "kuesioner",
                         "slug" : "pengguna-zat-adiktif",
+                        "jenis_kelamin" : NULL,
+                        "umur" : NULL,
                         "opsi_jawaban": {
                             "nama": "Ya/Tidak",
                             "tipe_opsi": "pilihan",
@@ -1191,7 +1195,9 @@ Post identitas for penjarkes
                         "id": 40,
                         "nama": "Kesehatan Reproduksi",
                         "layout": "kuesioner",
-                        "slug" : "pengguna-zat-adiktif",
+                        "slug" : "kesehatan-reproduksi",
+                        "jenis_kelamin" : NULL,
+                        "umur" : NULL,
                         "opsi_jawaban": {
                             "nama": "Ya/Tidak",
                             "tipe_opsi": "pilihan",
@@ -1211,6 +1217,9 @@ Post identitas for penjarkes
                                 "id": 41,
                                 "nama": "PESERTA DIDIK PEREMPUAN",
                                 "layout": "kuesioner",
+                                "slug" : "kesehatan-reproduksi-perempuan",
+                                "jenis_kelamin" : "perempuan",
+                                "umur" : NULL,
                                 "opsi_jawaban": null,
                                 "list_sub_form": [],
                                 "list_pertanyaan": [
@@ -1308,6 +1317,9 @@ Post identitas for penjarkes
                                 "id": 42,
                                 "nama": "PESERTA DIDIK PUTRA",
                                 "layout": "kuesioner",
+                                "slug" : "kesehatan-reproduksi-laki-laki",
+                                "jenis_kelamin" : "laki-laki",
+                                "umur" : NULL,
                                 "opsi_jawaban": null,
                                 "list_sub_form": [],
                                 "list_pertanyaan": [
@@ -1387,6 +1399,8 @@ Post identitas for penjarkes
                         "nama": "Kesehatan Mental Emosional",
                         "layout": "kuesioner",
                         "slug": "kesehatan-mental-emosional",
+                        "jenis_kelamin" : NULL,
+                        "umur" : NULL,
                         "opsi_jawaban": {
                             "nama": "Benar/Agak Benar/Tidak Benar",
                             "tipe_opsi": "pilihan",
@@ -1410,6 +1424,9 @@ Post identitas for penjarkes
                                 "id": 44,
                                 "nama": "A. Kuesioner Kekuatan dan Kesulitan Anak Usia 4 - 10 tahun",
                                 "layout": "kuesioner",
+                                "slug" : "kesehatan-mental-emosional-410",
+                                "jenis_kelamin" : NULL,
+                                "umur" : "4-10",
                                 "opsi_jawaban": null,
                                 "list_sub_form": [],
                                 "list_pertanyaan": [
@@ -1694,6 +1711,9 @@ Post identitas for penjarkes
                                 "id": 45,
                                 "nama": "B. Kuesioner Kekuatan dan Kesulitan Anak Usia 11 - 18 tahun",
                                 "layout": "kuesioner",
+                                "slug" : "kesehatan-mental-emosional-1118",
+                                "jenis_kelamin" : NULL,
+                                "umur" : "11-18",
                                 "opsi_jawaban": null,
                                 "list_sub_form": [],
                                 "list_pertanyaan": [
@@ -1981,6 +2001,8 @@ Post identitas for penjarkes
                         "nama": "Kesehatan Intelegensia",
                         "layout": "kuesioner",
                         "slug" : "kesehatan-intelegensia",
+                        "jenis_kelamin" : NULL,
+                        "umur" : NULL,
                         "opsi_jawaban": {
                             "nama": "Ya/Tidak",
                             "tipe_opsi": "pilihan",
